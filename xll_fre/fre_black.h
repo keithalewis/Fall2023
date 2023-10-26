@@ -32,12 +32,12 @@ namespace fre::black {
 
 			return -normal::cdf(m, s);
 		}
-		// (d/ds)E[(k - F)^+] = E[-1(F <= k) dF/ds] = -P^s(Z <= m) (Z - s)
+		// (d/ds)E[(k - F)^+] 
 		inline double vega(double f, double s, double k)
 		{
 			double m = moneyness(f, k, s);
 
-			return -normal::cdf(m, s) * (m - s); //!!! fix this
+			return f * normal::pdf(m, s);
 		}
 #ifdef _DEBUG
 		inline int vega_test()
