@@ -45,4 +45,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="hw6.xlsx" />
+  </ItemGroup>
 </Project>
